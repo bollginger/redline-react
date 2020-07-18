@@ -12,6 +12,8 @@
 /build
 
 # misc
+/public/*.pdf
+*.pdf
 .DS_Store
 .env.local
 .env.development.local
