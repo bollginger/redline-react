@@ -26,14 +26,7 @@ export default function ZineViewer(props) {
   const { pdf } = props;
 
   return (
-    <>
-      <Document
-        file= {pdf}
-        options={{ workerSrc: "/pdf.worker.js" }}
-        onLoadSuccess={onDocumentLoadSuccess}
-      >
-        <Page pageNumber={pageNumber} />
-      </Document>
+    <div class='zineviewer'>
       <div>
         <p>
           Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
@@ -49,6 +42,13 @@ export default function ZineViewer(props) {
           Next
         </button>
       </div>
-    </>
+      <Document
+        file= {pdf}
+        options={{ workerSrc: "/pdf.worker.js" }}
+        onLoadSuccess={onDocumentLoadSuccess}
+      >
+        <Page pageNumber={pageNumber} class='pdfpage'/>
+      </Document>
+    </div>
   );
 }

@@ -1,43 +1,64 @@
 html {
     box-sizing: border-box;
-  }
+    background-color: blanchedalmond;
+}
 
-  *, *::before, *::after {
+*, *::before, *::after {
     box-sizing: inherit;
     padding: 0;
     margin: 0;
-  }
+}
 
-  .app {
-    width: 960px;
-    margin: 0 auto;
+.app {
+    width:100%;
+    margin: auto;
     padding: 20px;
-  }
+}
 
-  nav ul {
+nav ul {
     list-style: none;
     display: flex;
-    background-color: black;
+    flex-direction:column;
+    background-color: blanchedalmond;
     margin-bottom: 20px;
-  }
+    box-sizing: border-box;
+}
 
-  nav ul li {
+nav ul li {
     padding: 20px;
-  }
+}
 
-  nav ul li a {
-    color: white;
+nav ul li a {
+    color: maroon;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
     text-decoration: none;
-  }
+}
 
-  .current {
-    border-bottom: 4px solid white;
-  }
+.current {
+    border-bottom: 4px solid maroon;
+}
 
-  h1 {
-    margin-bottom: 20px;
-  }
+.main {
+    width: 80%;
+    box-sizing: border-box;
+    float:right;
+    color: maroon;
+    background-color: blanchedalmond;
+}
 
-  p {
-    margin-bottom: 15px;
-  }
+.navigation {
+    width: 20%;
+    box-sizing: border-box;
+    float:left;
+    background-color: blanchedalmond;
+}
+
+.zineviewer {
+    width: 80%;
+    transform: scale(0.7);
+}
+
+.pdfpage {
+    height:'400';
+}
