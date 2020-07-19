@@ -7,6 +7,7 @@ import CurrentPrompts from '../pages/CurrentPrompts';
 import CurrentIssue from '../pages/CurrentIssue';
 import Shop from '../pages/Shop';
 import Archive from '../pages/Archive';
+import Submissions from '../pages/Submissions';
 
 const Main = () => (
     <Switch>
@@ -16,6 +17,7 @@ const Main = () => (
       <Route exact path='/currentissue' component={CurrentIssue}></Route>
       <Route exact path='/shop' component={Shop}></Route>
       <Route exact path='/currentprompts' component={CurrentPrompts}></Route>
+      <Route exact path='/submit' component={Submissions}></Route>
       <Route exact path='/archive' component={Archive}></Route>
     </Switch>
   );

@@ -2,16 +2,18 @@ import React from 'react';
 // import Header from '../Header/Header.component';
 import Navigation from './Navigation';
 import Main from './Main';
-import './App.css';
+import '../styles/style.css'
 
 function App() {
   return (
-    <div className='app'>
+  <>
+  <div class='navigation'>
     <Navigation />
-    <div class='main'>
-      <Main />
-    </div>
   </div>
+  <div class='main'>
+    <Main />
+  </div>
+  </>
   );
 }
 

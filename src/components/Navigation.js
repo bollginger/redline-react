@@ -1,9 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import '../styles/style.css'
 
 const Navigation = () => (
-    <div class='navigation'>
-        <NavLink exact activeClassName="current" to='/'>
+    <div class="nav-items">
+        <NavLink exact to='/'>
             <img src='redline_red.png' height = '200' width = '250' alt='Redline Logo'></img>
         </NavLink>
         <nav>
@@ -13,6 +14,7 @@ const Navigation = () => (
             <li><NavLink exact activeClassName="current" to='/currentissue'>Current Issue</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/archive'>Archive</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/currentprompts'>Prompts</NavLink></li>
+            <li><NavLink exact activeClassName="current" to='/submit'>Submissions</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/shop'>Shop</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/contact'>Contact</NavLink></li>
             <li><a href='https://www.instagram.com/redline_zine/'>

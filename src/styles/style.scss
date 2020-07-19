@@ -1,0 +1,74 @@
+$primaryBackground: blanchedalmond;
+$primaryFont: Georgia, 'Times New Roman', Times, serif;
+$primaryFontColor: maroon;
+
+html {
+    box-sizing: border-box;
+    background-color: $primaryBackground;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction:column;
+        background-color: $primaryBackground;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        li {
+            padding: 20px;
+            a {
+                color: $primaryFontColor;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-style: italic;
+                text-decoration: none;
+                &:hover{
+                    font-style: normal;
+                }
+            }
+        }
+    }
+}
+
+.current {
+    border-bottom: 4px solid $primaryFontColor;
+}
+
+.main {
+    width: 80%;
+    box-sizing: border-box;
+    float:right;
+    color: $primaryFontColor;
+    background-color: blanchedalmond;
+}
+
+.navigation {
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    box-sizing: border-box;
+    float:left;
+}
+
+.zineviewer {
+    margin: 0;
+    padding: 0;
+}
+
+.prompts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+.full-row {
+    font-weight: bold;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

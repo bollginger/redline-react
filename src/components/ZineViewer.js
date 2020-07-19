@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
+import '../styles/style.css'
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
  
-export default function ZineViewer(props) {
+function ZineViewer(props) {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1); //setting 1 to show fisrt page
 
@@ -27,28 +28,28 @@ export default function ZineViewer(props) {
 
   return (
     <div class='zineviewer'>
-      <div>
-        <p>
-          Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
-        </p>
-        <button type="button" disabled={pageNumber <= 1} onClick={previousPage}>
-          Previous
-        </button>
-        <button
-          type="button"
-          disabled={pageNumber >= numPages}
-          onClick={nextPage}
-        >
-          Next
-        </button>
-      </div>
+      <p>
+        Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
+      </p>
+      <button type="button" disabled={pageNumber <= 1} onClick={previousPage}>
+        Previous
+      </button>
+      <button
+        type="button"
+        disabled={pageNumber >= numPages}
+        onClick={nextPage}
+      >
+        Next
+      </button>
       <Document
         file= {pdf}
         options={{ workerSrc: "/pdf.worker.js" }}
         onLoadSuccess={onDocumentLoadSuccess}
       >
-        <Page pageNumber={pageNumber} class='pdfpage'/>
+        <Page pageNumber={pageNumber}></Page>
       </Document>
     </div>
   );
 }
+
+export default ZineViewer;

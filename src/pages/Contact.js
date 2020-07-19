@@ -2,8 +2,9 @@ import React from 'react';
 
 const Contact = () => (
   <div className='contact'>
-    <h1>Contact Me</h1>
-    <p>You can reach me via email: <strong>hello@example.com</strong></p>
+    <h1>Contact</h1>
+    <p> Please send art to <strong>submissions@redlinezine.com</strong></p>
+    <p> For all other questions, <strong>info@redlinezine.com</strong></p>
   </div>
 );
 
