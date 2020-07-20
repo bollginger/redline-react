@@ -1,6 +1,7 @@
 $primaryBackground: blanchedalmond;
 $primaryFont: Georgia, 'Times New Roman', Times, serif;
 $primaryFontColor: maroon;
+$lighterPrimaryFont: #990000;
 
 html {
     box-sizing: border-box;
@@ -12,6 +13,8 @@ html {
     padding: 0;
     margin: 0;
 }
+
+// styling for navigation
 
 nav {
     ul {
@@ -25,7 +28,7 @@ nav {
             padding: 20px;
             a {
                 color: $primaryFontColor;
-                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-family: $primaryFont;
                 font-style: italic;
                 text-decoration: none;
                 &:hover{
@@ -36,18 +39,6 @@ nav {
     }
 }
 
-.current {
-    border-bottom: 4px solid $primaryFontColor;
-}
-
-.main {
-    width: 80%;
-    box-sizing: border-box;
-    float:right;
-    color: $primaryFontColor;
-    background-color: blanchedalmond;
-}
-
 .navigation {
     margin: 0;
     padding: 0;
@@ -56,10 +47,59 @@ nav {
     float:left;
 }
 
+.current {
+    border-bottom: 4px solid $primaryFontColor;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    &:hover {
+        .logo-white {
+            display: inline;
+        }
+    }
+}
+.logo-white {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+// styling for all pages
+
+.main {
+    width: 80%;
+    box-sizing: border-box;
+    float: right;
+    color: $primaryFontColor;
+    background-color: $primaryBackground;
+}
+
+// ZineViewer
+
 .zineviewer {
     margin: 0;
     padding: 0;
+    button {
+        background-color: $primaryFontColor;
+        border: $primaryBackground;
+        color: $primaryBackground;
+        padding: 1em 2em;
+        margin: 0.5em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        &:hover{
+            background-color: $lighterPrimaryFont;
+        }
+    }
 }
+
+// related to prompts page
 
 .prompts {
     display: grid;
@@ -71,4 +111,28 @@ nav {
     font-weight: bold;
     grid-column-start: 1;
     grid-column-end: 3;
+}
+
+// related to homepage
+
+.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+.rotating-home {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-right {
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }

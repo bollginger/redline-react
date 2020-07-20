@@ -3,11 +3,13 @@ import { NavLink } from 'react-router-dom';
 import '../styles/style.css'
 
 const Navigation = () => (
-    <div class="nav-items">
+    <nav>
         <NavLink exact to='/'>
-            <img src='redline_red.png' height = '200' width = '250' alt='Redline Logo'></img>
+            <div class='logo'>
+                <img src='redline_red.png' height='200' width='250' alt='Redline Logo'></img>
+                <img src='redline_red_to_grey.png' height='200' width='250' alt='Redline Logo' class='logo-white'></img>
+            </div>
         </NavLink>
-        <nav>
         <ul>
             <li><NavLink exact activeClassName="current" to='/'>Home</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/about'>About</NavLink></li>
@@ -20,8 +22,7 @@ const Navigation = () => (
             <li><a href='https://www.instagram.com/redline_zine/'>
                 <img src='./insta.jpeg' height='20' width='20' alt='Instagram'></img></a></li>
         </ul>
-        </nav>
-    </div>
+    </nav>
   );
 
 export default Navigation;

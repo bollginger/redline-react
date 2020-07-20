@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Archive = () => (
-  <div className='home'>
+  <div className='archive'>
     <h1>Archived issues</h1>
     <ol>
         <li><a href='./redline_issue_1_2020.pdf' download>Ed.1, Vol.1 [JUNE 2020]</a></li>
