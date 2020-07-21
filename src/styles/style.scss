@@ -26,6 +26,7 @@ nav {
         box-sizing: border-box;
         li {
             padding: 20px;
+
             a {
                 color: $primaryFontColor;
                 font-family: $primaryFont;
@@ -49,6 +50,13 @@ nav {
 
 .current {
     border-bottom: 4px solid $primaryFontColor;
+}
+
+.inDropdown {
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: black;
 }
 
 .logo {

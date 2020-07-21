@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import ZinePreview from '../components/ZinePreview';
-import redline2 from "./redline_issue_2_2020.pdf";
+import redline2 from "../zines/redline_issue_2_2020.pdf";
 
 const Home = () => (
   <div class='home'>

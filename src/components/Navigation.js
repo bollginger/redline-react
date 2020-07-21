@@ -15,6 +15,8 @@ const Navigation = () => (
             <li><NavLink exact activeClassName="current" to='/about'>About</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/currentissue'>Current Issue</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/archive'>Archive</NavLink></li>
+            <li><NavLink exact activeClassName="current" class='inDropdown' to='/archive-issue2'>Issue 2 // July 2020</NavLink></li>
+            <li><NavLink exact activeClassName="current" class='inDropdown' to='/archive-issue1'>Issue 1 // June 2020</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/currentprompts'>Prompts</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/submit'>Submissions</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/shop'>Shop</NavLink></li>
@@ -23,6 +25,6 @@ const Navigation = () => (
                 <img src='./insta.jpeg' height='20' width='20' alt='Instagram'></img></a></li>
         </ul>
     </nav>
-  );
+);
 
 export default Navigation;

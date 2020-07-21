@@ -54,6 +54,13 @@ nav ul li a:hover {
   border-bottom: 4px solid maroon;
 }
 
+.inDropdown {
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: black;
+}
+
 .logo {
   position: relative;
   display: inline-block;
