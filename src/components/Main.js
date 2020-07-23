@@ -10,6 +10,7 @@ import Archive from '../pages/Archive';
 import Submissions from '../pages/Submissions';
 import redline2PDF from "../zines/redline_issue_2_2020.pdf";
 import redline1PDF from "../zines/redline_issue_1_2020.pdf";
+import Subscribe from '../pages/Subscribe';
 
 var redlineIssue1 = {
   issueNumber: 1,
@@ -43,6 +44,7 @@ const Main = () => (
       <Route exact path='/shop' component={Shop}></Route>
       <Route exact path='/currentprompts' component={CurrentPrompts}></Route>
       <Route exact path='/submit' component={Submissions}></Route>
+      <Route exact path='/subscribe' component={Subscribe}></Route>
       <Route exact path='/archive' component={Archive}></Route>
       <Route exact path='/archive-issue1' render={(props) => 
           <DisplayIssue {...props} issueNumber={redlineIssue1.issueNumber}
