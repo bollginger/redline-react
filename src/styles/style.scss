@@ -3,6 +3,13 @@ $primaryFont: Georgia, 'Times New Roman', Times, serif;
 $primaryFontColor: maroon;
 $lighterPrimaryFont: #990000;
 
+// responsive settings for media queries
+$smallPhone: "only screen and (max-width : 320px)";
+$largePhone: "only screen and (max-width : 480px)";
+$tablet: "only screen and (max-width : 768px)";
+$smallComputer: "only screen and (max-width : 1024px)";
+$largeComputer: "only screen and (max-width : 1200px)";
+
 html {
     box-sizing: border-box;
     background-color: $primaryBackground;
@@ -38,6 +45,10 @@ nav {
             }
         }
     }
+
+    @media #{$smallPhone, $largePhone} {
+        visibility: hidden;
+    }
 }
 
 .navigation {
@@ -46,6 +57,10 @@ nav {
     width: 20%;
     box-sizing: border-box;
     float:left;
+
+    @media #{$smallPhone, $largePhone} {
+        width: 0%;
+    }
 }
 
 .current {
@@ -62,18 +77,33 @@ nav {
 .logo {
     position: relative;
     display: inline-block;
+    height: 200px;
+    width: 250px; 
     &:hover {
         .logo-white {
             display: inline;
         }
     }
+
+    @media #{$tablet, $smallComputer} {
+        height: 120px;
+        width: 150px;
+    }
 }
+
 .logo-white {
     display: none;
     position: absolute;
+    height: 200px;
+    width: 250px;
     top: 0;
     left: 0;
     z-index: 2;
+
+    @media #{$tablet, $smallComputer} {
+        height: 120px;
+        width: 150px;
+    }
 }
 
 // styling for all pages
@@ -84,6 +114,24 @@ nav {
     float: right;
     color: $primaryFontColor;
     background-color: $primaryBackground;
+
+    @media #{$smallPhone, $largePhone} {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.logo-mobile-only {
+    display: none;
+
+    @media #{$smallPhone, $largePhone} {
+        display: inline-block;
+        position: relative;
+        height: 120px;
+        width: 150px;
+    }
 }
 
 // ZineViewer
@@ -124,9 +172,14 @@ nav {
 // related to homepage
 
 .home {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction:row;
     text-align: center;
+    justify-content: center;
+
+    @media #{$smallPhone, $largePhone, $tablet} {
+        flex-direction:column;
+    }
 }
 
 .rotating-home {
@@ -141,6 +194,10 @@ nav {
     display: flex;
     flex-direction:column;
     text-align: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
+
+    @media #{$smallPhone, $largePhone, $tablet} {
+        flex-direction:column;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
 }

@@ -6,8 +6,8 @@ const Navigation = () => (
     <nav>
         <NavLink exact to='/'>
             <div class='logo'>
-                <img src='redline_red.png' height='200' width='250' alt='Redline Logo'></img>
-                <img src='redline_red_to_grey.png' height='200' width='250' alt='Redline Logo' class='logo-white'></img>
+                <img src='redline_red.png' alt='Redline Logo' class='logo'></img>
+                <img src='redline_red_to_grey.png' alt='Redline Logo' class='logo-white'></img>
             </div>
         </NavLink>
         <ul>
