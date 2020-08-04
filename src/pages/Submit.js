@@ -1,6 +1,7 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom'
 
-const CurrentPrompts = () => (
+const Submit = () => (
   <>
     <h1>Current Prompts</h1>
     <div className='prompts'>
@@ -21,8 +22,8 @@ const CurrentPrompts = () => (
       <p>With an unhurried and deliberate gesture, you smooth over the single wrinkle in your sleeve. For the hundredth time, you make sure that the one strand of hair is precisely out-of-place. Your bored expression is perfectly mysterious, and your practiced laugh rings delicate but sincere. Whether you choose to be the loner in the corner or the life of the party, you are secure knowing exactly how much skin is showing.</p>
       <p>With the ghost of the last polite smile still fading from your face, you begin the journey home. It’s quiet, finally, and though you know that your performance was a success, you let yourself wonder if you had any fun. You try to separate yourself from your role; but the lines have blurred for too long, and you struggle to draw them again. When you peel back every pretense and remove all of the charm—when every artifice designed to be ‘seen’ is stripped away—what’s left?</p>
     </div>
+    <NavLink exact to='/guidelines'><h3>Ready to Submit? Review our guidelines here</h3></NavLink>
   </>
 );
 
-
-export default CurrentPrompts;
+export default Submit;

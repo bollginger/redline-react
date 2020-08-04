@@ -14,8 +14,7 @@ const Navigation = () => (
             <li><NavLink exact activeClassName="current" to='/about'>About</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/currentissue'>Current Issue</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/archive'>Archive</NavLink></li>
-            <li><NavLink exact activeClassName="current" to='/currentprompts'>Prompts</NavLink></li>
-            <li><NavLink exact activeClassName="current" to='/submit'>Submissions</NavLink></li>
+            <li><NavLink exact activeClassName="current" to='/submit'>Submit</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/shop'>Shop</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/subscribe'>Subscribe</NavLink></li>
             <li><NavLink exact activeClassName="current" to='/contact'>Contact</NavLink></li>

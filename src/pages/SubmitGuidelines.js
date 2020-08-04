@@ -1,10 +1,8 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom'
 
-const Submissions = () => (
+const SubmitGuidelines = () => (
   <div className='submissions'>
     <h1>Guidelines</h1>
-    <NavLink exact to='/currentprompts'><h3>Prompts</h3></NavLink>
     <p>Each issue of Redline is divided into disparate sections relating to a general theme; prompts for these sections can be found on the “Current Prompts” page. We encourage you to interpret them as strictly or as loosely as you see fit. If you have work you are passionate about that doesn’t fit into any prompt, submit it anyway; we often find that unprompted work resonates with the issue’s themes in unexpected ways.</p>
     <p>What to send</p>
     <p>When in doubt, send it; we want everything that you’re willing to give. From doodles to oil paintings, grocery lists to epic novels, we want it all. We accept a wide range of media including, but not limited to:</p>
@@ -30,4 +28,5 @@ const Submissions = () => (
   </div>
 );
 
-export default Submissions;
+
+export default SubmitGuidelines;

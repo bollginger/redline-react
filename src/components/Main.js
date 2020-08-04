@@ -3,14 +3,14 @@ import { Switch, Route, NavLink } from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
-import CurrentPrompts from '../pages/CurrentPrompts';
 import DisplayIssue from '../pages/DisplayIssue';
 import Shop from '../pages/Shop';
 import Archive from '../pages/Archive';
-import Submissions from '../pages/Submissions';
+import Submissions from '../pages/Submit';
 import redline2PDF from "../zines/redline_issue_2_2020.pdf";
 import redline1PDF from "../zines/redline_issue_1_2020.pdf";
 import Subscribe from '../pages/Subscribe';
+import SubmitGuidelines from '../pages/SubmitGuidelines';
 
 var redlineIssue1 = {
   issueNumber: 1,
@@ -48,7 +48,7 @@ const Main = () => (
             />}>
         </Route>
         <Route exact path='/shop' component={Shop}></Route>
-        <Route exact path='/currentprompts' component={CurrentPrompts}></Route>
+        <Route exact path='/guidelines' component={SubmitGuidelines}></Route>
         <Route exact path='/submit' component={Submissions}></Route>
         <Route exact path='/subscribe' component={Subscribe}></Route>
         <Route exact path='/archive' component={Archive}></Route>
