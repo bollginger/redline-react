@@ -7,26 +7,10 @@ import DisplayIssue from '../pages/DisplayIssue';
 import Shop from '../pages/Shop';
 import Archive from '../pages/Archive';
 import Submissions from '../pages/Submit';
-import redline2PDF from "../zines/redline_issue_2_2020.pdf";
-import redline1PDF from "../zines/redline_issue_1_2020.pdf";
 import Subscribe from '../pages/Subscribe';
 import SubmitGuidelines from '../pages/SubmitGuidelines';
+import { redlineIssue1, redlineIssue2 } from '../zines/zineVariables';
 
-var redlineIssue1 = {
-  issueNumber: 1,
-  issueDate: 'June 2020',
-  pdf: redline1PDF,
-  path: "../zines/redline_issue_1_2020.pdf",
-  download: "./zines/redline_issue_1_2020.pdf"
-};
-
-var redlineIssue2 = {
-  issueNumber: 2,
-  issueDate: 'July 2020',
-  pdf: redline2PDF,
-  path: "../zines/redline_issue_2_2020.pdf",
-  download: "./zines/redline_issue_2_2020.pdf"
-};
 
 const Main = () => (
     <>

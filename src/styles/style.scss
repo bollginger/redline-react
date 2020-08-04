@@ -201,3 +201,16 @@ nav {
         margin-top: 20px;
     }
 }
+
+// related to archive page
+
+.archive {
+    display: flex;
+    flex-direction:row;
+    text-align: center;
+    justify-content: center;
+
+    @media #{$smallPhone, $largePhone, $tablet} {
+        flex-direction:column;
+    }
+}
