@@ -151,13 +151,15 @@ nav ul li a:hover {
 .zineviewer {
   margin: 0;
   padding: 0;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .zineviewer button {
   background-color: maroon;
   border: blanchedalmond;
   color: blanchedalmond;
-  padding: 1em 2em;
+  padding: 0.5em 2em;
   margin: 0.5em;
   text-align: center;
   text-decoration: none;
@@ -167,6 +169,12 @@ nav ul li a:hover {
 
 .zineviewer button:hover {
   background-color: #990000;
+}
+
+@media only screen and (max-width: 320px), only screen and (max-width: 480px) {
+  .zineviewer button {
+    font-size: 10px;
+  }
 }
 
 .prompts {

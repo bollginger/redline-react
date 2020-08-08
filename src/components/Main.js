@@ -30,8 +30,8 @@ const Main = ({pdfWidth}) => (
             <DisplayIssue {...props} issueNumber={redlineIssue2.issueNumber}
                                     issueDate={redlineIssue2.issueDate}
                                     pdf={redlineIssue2.pdf}
-                                    path={redlineIssue2.path}
                                     download={redlineIssue2.download}
+                                    pdfWidth={pdfWidth}
             />}>
         </Route>
         <Route exact path='/shop' component={Shop}></Route>
@@ -46,16 +46,16 @@ const Main = ({pdfWidth}) => (
             <DisplayIssue {...props} issueNumber={redlineIssue1.issueNumber}
                                     issueDate={redlineIssue1.issueDate}
                                     pdf={redlineIssue1.pdf}
-                                    path={redlineIssue1.path}
                                     download={redlineIssue1.download}
+                                    pdfWidth={pdfWidth}
             />}>
         </Route>
         <Route exact path='/archive-issue2' render={(props) => 
             <DisplayIssue {...props} issueNumber={redlineIssue2.issueNumber}
                                     issueDate={redlineIssue2.issueDate}
-                                    pdf={redlineIssue2.pdf}
-                                    path={redlineIssue2.path}
+                                    pdf={redlineIssue2.pdf} 
                                     download={redlineIssue2.download}
+                                    pdfWidth={pdfWidth}
             />}>
         </Route>
       </Switch>

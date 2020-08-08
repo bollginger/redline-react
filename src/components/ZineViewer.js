@@ -24,7 +24,12 @@ function ZineViewer(props) {
     changePage(1);
   }
 
-  const { pdf } = props;
+  let { pdf, pdfWidth } = props;
+
+  // because pdfs are rendered without regard to css, below optimizes for mobile
+  // also takes into account that page 1 has half the width of later pages
+  pdfWidth = (pdfWidth <= 480) ? pdfWidth:pdfWidth*0.8;
+  pdfWidth = (pageNumber === 1) ? pdfWidth*0.5:pdfWidth;
 
   return (
     <div class='zineviewer'>
@@ -46,7 +51,7 @@ function ZineViewer(props) {
         options={{ workerSrc: "/pdf.worker.js" }}
         onLoadSuccess={onDocumentLoadSuccess}
       >
-        <Page pageNumber={pageNumber}></Page>
+        <Page pageNumber={pageNumber} width={pdfWidth} ></Page>
       </Document>
     </div>
   );
