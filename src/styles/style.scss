@@ -1,4 +1,5 @@
 $primaryBackground: blanchedalmond;
+$secondaryBackground: blanchedalmond;
 $primaryFont: Georgia, 'Times New Roman', Times, serif;
 $primaryFontColor: maroon;
 $lighterPrimaryFont: #990000;
@@ -26,11 +27,12 @@ html {
 nav {
     ul {
         list-style: none;
-        display: flex;
+        display: none;
         flex-direction:column;
-        background-color: $primaryBackground;
         margin-bottom: 20px;
         box-sizing: border-box;
+        width: 200px;
+
         li {
             padding: 20px;
 
@@ -52,15 +54,16 @@ nav {
 }
 
 .navigation {
+    position: absolute;
     margin: 0;
     padding: 0;
-    width: 20%;
+    width: 10%;
+    height: 100%;
+    background-color: $secondaryBackground;
+    border-style: none;
+    border-color: black;
     box-sizing: border-box;
     float:left;
-
-    @media #{$smallPhone, $largePhone} {
-        width: 0%;
-    }
 }
 
 .current {
@@ -74,42 +77,70 @@ nav {
     color: black;
 }
 
-.logo {
+.logo-expanded {
     position: relative;
-    display: inline-block;
-    height: 200px;
-    width: 250px; 
-    &:hover {
-        .logo-white {
-            display: inline;
-        }
-    }
-
-    @media #{$tablet, $smallComputer} {
-        height: 120px;
-        width: 150px;
-    }
-}
-
-.logo-white {
     display: none;
-    position: absolute;
-    height: 200px;
-    width: 250px;
+    height: 180px;
+    width: 225px;
     top: 0;
     left: 0;
     z-index: 2;
 
     @media #{$tablet, $smallComputer} {
-        height: 120px;
-        width: 150px;
+        height: 100px;
+        width: 125px;
+    }
+}
+
+.logo-collapsed {
+    display: inline-block;
+    position: relative;
+    height: 100px;
+    width: 100px;
+
+    margin-top: 45px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+
+    @media #{$tablet, $smallComputer} {
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 8px;
+        margin-bottom: 20px;
+    }
+}
+
+.icon-expanded {
+    position: relative;
+    display: none;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    @media #{$tablet, $smallComputer} {
+
+    }
+}
+
+.icon-collapsed {
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    left: 0;
+
+    @media #{$tablet, $smallComputer} {
     }
 }
 
 // styling for all pages
 
 .main {
-    width: 80%;
+    position: relative;
+    width: 90%;
     padding-top: 5%;
     padding-bottom: 5%;
     box-sizing: border-box;
@@ -118,23 +149,11 @@ nav {
     background-color: $primaryBackground;
 
     @media #{$smallPhone, $largePhone} {
-        width: 100%;
         padding-top: 0%;
         padding-bottom: 0%;
         display: flex;
         flex-direction: column;
         text-align: center;
-    }
-}
-
-.logo-mobile-only {
-    display: none;
-
-    @media #{$smallPhone, $largePhone} {
-        display: inline-block;
-        position: relative;
-        height: 120px;
-        width: 150px;
     }
 }
 
@@ -176,6 +195,11 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
+    padding-right: 5%;
+
+    @media #{$smallPhone, $largePhone} {
+        padding-left: 5%;
+    }
 }
 
 .full-row {
@@ -238,5 +262,15 @@ nav {
 
     @media #{$smallPhone, $largePhone, $tablet} {
         width: 0%;
+    }
+}
+
+// Related to About page
+
+.about {
+    padding-right: 5%;
+
+    @media #{$smallPhone, $largePhone} {
+        padding-left: 5%;
     }
 }

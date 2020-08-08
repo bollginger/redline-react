@@ -13,17 +13,15 @@ html {
 
 nav ul {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: blanchedalmond;
   margin-bottom: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 200px;
 }
 
 nav ul li {
@@ -48,18 +46,17 @@ nav ul li a:hover {
 }
 
 .navigation {
+  position: absolute;
   margin: 0;
   padding: 0;
-  width: 20%;
+  width: 10%;
+  height: 100%;
+  background-color: blanchedalmond;
+  border-style: none;
+  border-color: black;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   float: left;
-}
-
-@media only screen and (max-width: 320px), only screen and (max-width: 480px) {
-  .navigation {
-    width: 0%;
-  }
 }
 
 .current {
@@ -73,43 +70,64 @@ nav ul li a:hover {
   color: black;
 }
 
-.logo {
+.logo-expanded {
   position: relative;
-  display: inline-block;
-  height: 200px;
-  width: 250px;
-}
-
-.logo:hover .logo-white {
-  display: inline;
-}
-
-@media only screen and (max-width: 768px), only screen and (max-width: 1024px) {
-  .logo {
-    height: 120px;
-    width: 150px;
-  }
-}
-
-.logo-white {
   display: none;
-  position: absolute;
-  height: 200px;
-  width: 250px;
+  height: 180px;
+  width: 225px;
   top: 0;
   left: 0;
   z-index: 2;
 }
 
 @media only screen and (max-width: 768px), only screen and (max-width: 1024px) {
-  .logo-white {
-    height: 120px;
-    width: 150px;
+  .logo-expanded {
+    height: 100px;
+    width: 125px;
   }
 }
 
+.logo-collapsed {
+  display: inline-block;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin-top: 45px;
+  margin-left: 15px;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px), only screen and (max-width: 1024px) {
+  .logo-collapsed {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 8px;
+    margin-bottom: 20px;
+  }
+}
+
+.icon-expanded {
+  position: relative;
+  display: none;
+  height: 30px;
+  width: 30px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.icon-collapsed {
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  top: 0;
+  left: 0;
+}
+
 .main {
-  width: 80%;
+  position: relative;
+  width: 90%;
   padding-top: 5%;
   padding-bottom: 5%;
   -webkit-box-sizing: border-box;
@@ -121,7 +139,6 @@ nav ul li a:hover {
 
 @media only screen and (max-width: 320px), only screen and (max-width: 480px) {
   .main {
-    width: 100%;
     padding-top: 0%;
     padding-bottom: 0%;
     display: -webkit-box;
@@ -132,19 +149,6 @@ nav ul li a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
-  }
-}
-
-.logo-mobile-only {
-  display: none;
-}
-
-@media only screen and (max-width: 320px), only screen and (max-width: 480px) {
-  .logo-mobile-only {
-    display: inline-block;
-    position: relative;
-    height: 120px;
-    width: 150px;
   }
 }
 
@@ -183,6 +187,13 @@ nav ul li a:hover {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   text-align: center;
+  padding-right: 5%;
+}
+
+@media only screen and (max-width: 320px), only screen and (max-width: 480px) {
+  .prompts {
+    padding-left: 5%;
+  }
 }
 
 .full-row {
@@ -278,6 +289,16 @@ nav ul li a:hover {
 @media only screen and (max-width: 320px), only screen and (max-width: 480px), only screen and (max-width: 768px) {
   .archiveIssuePadding {
     width: 0%;
+  }
+}
+
+.about {
+  padding-right: 5%;
+}
+
+@media only screen and (max-width: 320px), only screen and (max-width: 480px) {
+  .about {
+    padding-left: 5%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -14,11 +14,6 @@ import { redlineIssue1, redlineIssue2 } from '../zines/zineVariables';
 
 const Main = ({pdfWidth}) => (
     <>
-      <NavLink exact to='/'>
-            <div>
-                <img src='redline_red.png' alt='Redline Logo' class='logo-mobile-only'></img>
-            </div>
-      </NavLink>
       <Switch>
         <Route exact path='/' render={(props) => 
             <Home {...props} pdfWidth={pdfWidth} />

@@ -27,7 +27,7 @@ class App extends PureComponent {
   render () {
     return (
       <>
-        <div class='navigation'>
+        <div class='navigation' id='navigation'>
           <Navigation />
         </div>
         <div class='main' id='main' ref={(ref) => this.main = ref}>
