@@ -4,7 +4,10 @@ import '../styles/style.css'
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
  
 function ZinePreview(props) {
-  const { pdf } = props;
+  let { pdf, pdfWidth } = props;
+  
+  // because pdfs are rendered without regard to css, below optimizes for mobile
+  pdfWidth = (pdfWidth <= 480) ? pdfWidth:pdfWidth*0.4;
 
   return (
     <div class='zine-preview'>
@@ -12,7 +15,7 @@ function ZinePreview(props) {
         file= {pdf}
         options={{ workerSrc: "/pdf.worker.js" }}
       >
-        <Page pageNumber={1}></Page>
+        <Page width={pdfWidth} pageNumber={1}></Page>
       </Document>
     </div>
   );

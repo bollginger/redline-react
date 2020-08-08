@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 import ZinePreview from '../components/ZinePreview';
 import redline2 from "../zines/redline_issue_2_2020.pdf";
 
-const Home = () => (
+const Home = ({pdfWidth}) => (
   <div class='home'>
     <NavLink to='/currentissue'>
-      <ZinePreview pdf={redline2}/>
+      <ZinePreview pdf={redline2} pdfWidth={pdfWidth}/>
     </NavLink>
     <div class='home-right'>
       <h3>Coming soon...</h3>

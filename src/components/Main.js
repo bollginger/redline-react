@@ -12,7 +12,7 @@ import SubmitGuidelines from '../pages/SubmitGuidelines';
 import { redlineIssue1, redlineIssue2 } from '../zines/zineVariables';
 
 
-const Main = () => (
+const Main = ({pdfWidth}) => (
     <>
       <NavLink exact to='/'>
             <div>
@@ -20,7 +20,10 @@ const Main = () => (
             </div>
       </NavLink>
       <Switch>
-        <Route exact path='/' component={Home}></Route>
+        <Route exact path='/' render={(props) => 
+            <Home {...props} pdfWidth={pdfWidth} />
+            }>
+        </Route>
         <Route exact path='/about' component={About}></Route>
         <Route exact path='/contact' component={Contact}></Route>
         <Route exact path='/currentissue' render={(props) => 
@@ -35,7 +38,10 @@ const Main = () => (
         <Route exact path='/guidelines' component={SubmitGuidelines}></Route>
         <Route exact path='/submit' component={Submissions}></Route>
         <Route exact path='/subscribe' component={Subscribe}></Route>
-        <Route exact path='/archive' component={Archive}></Route>
+        <Route exact path='/archive' render={(props) => 
+            <Archive {...props}  pdfWidth={pdfWidth}/>
+            }>
+        </Route>
         <Route exact path='/archive-issue1' render={(props) => 
             <DisplayIssue {...props} issueNumber={redlineIssue1.issueNumber}
                                     issueDate={redlineIssue1.issueDate}

@@ -110,6 +110,8 @@ nav {
 
 .main {
     width: 80%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     box-sizing: border-box;
     float: right;
     color: $primaryFontColor;
@@ -117,6 +119,8 @@ nav {
 
     @media #{$smallPhone, $largePhone} {
         width: 100%;
+        padding-top: 0%;
+        padding-bottom: 0%;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -155,6 +159,11 @@ nav {
     }
 }
 
+// ZinePreview
+
+.zine-preview {
+}
+
 // related to prompts page
 
 .prompts {
@@ -175,10 +184,11 @@ nav {
     display: flex;
     flex-direction:row;
     text-align: center;
-    justify-content: center;
+    justify-content: left;
 
     @media #{$smallPhone, $largePhone, $tablet} {
-        flex-direction:column;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
@@ -192,13 +202,15 @@ nav {
 
 .home-right {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     text-align: center;
+    margin-left: 10%;
 
     @media #{$smallPhone, $largePhone, $tablet} {
-        flex-direction:column;
+        flex-direction: column;
         margin-bottom: 20px;
         margin-top: 20px;
+        margin-left: 0%;
     }
 }
 
@@ -208,9 +220,17 @@ nav {
     display: flex;
     flex-direction:row;
     text-align: center;
-    justify-content: center;
+    margin-right: 10%;
 
     @media #{$smallPhone, $largePhone, $tablet} {
         flex-direction:column;
+    }
+}
+
+.archiveIssuePadding {
+    width: 5%;
+
+    @media #{$smallPhone, $largePhone, $tablet} {
+        width: 0%;
     }
 }
