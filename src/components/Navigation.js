@@ -38,7 +38,7 @@ const Navigation = () => {
         <nav>
             <NavLink exact to='/'>
                 <div class='logo'>
-                    <img src='redline_red_R.png' alt='Redline Logo' class='logo-collapsed' id='logo-collapsed'></img>
+                    <img src='RZLogo_2_cleanRED.png' alt='Redline Logo' class='logo-collapsed' id='logo-collapsed'></img>
                     <img src='redline_red.png' alt='Redline Logo' class='logo-expanded' id='logo-expanded'></img>
                 </div>
             </NavLink>

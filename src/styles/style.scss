@@ -1,8 +1,20 @@
-$primaryBackground: blanchedalmond;
-$secondaryBackground: blanchedalmond;
+$primaryBackground: #b3b3b3;
+$secondaryBackground: #999999;
 $primaryFont: Georgia, 'Times New Roman', Times, serif;
-$primaryFontColor: maroon;
-$lighterPrimaryFont: #990000;
+$primaryFontColor: #990000;
+$lighterPrimaryFont: #b30000;
+
+$navWidthLargeScreen: 130px;
+$navWidthTablet: 80px;
+$navWidthSmallScreen: 35px;
+
+// Colors for main background
+$bg-color: #999999;
+$dot-color: white;
+
+// Dimensions for main background design
+$dot-size: 1px;
+$dot-space: 22px;
 
 // responsive settings for media queries
 $smallPhone: "only screen and (max-width : 320px)";
@@ -53,13 +65,21 @@ nav {
     position: absolute;
     margin: 0;
     padding: 0;
-    width: 10%;
+    width: $navWidthLargeScreen;
     height: 100%;
-    background-color: $secondaryBackground;
+    background-color: $primaryBackground;
     border-style: none;
     border-color: black;
     box-sizing: border-box;
     float:left;
+
+    @media #{$tablet} {
+        width: $navWidthTablet;
+    }
+
+    @media #{$smallPhone, $largePhone} {
+        width: $navWidthSmallScreen;
+    }
 }
 
 .current {
@@ -144,17 +164,34 @@ nav {
 
 .main {
     position: relative;
-    width: 90%;
+    width: calc(100% - #{$navWidthLargeScreen});
+    height: 100vh;
     padding-top: 5%;
     padding-bottom: 5%;
+    padding-left: 20px;
     box-sizing: border-box;
     float: right;
     color: $primaryFontColor;
-    background-color: $primaryBackground;
+
+    // from https://codepen.io/edmundojr/pen/xOYJGw
+    background:
+        linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+        linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+        $dot-color;
+    background-size: $dot-space $dot-space;
+
+
+
+
+    @media #{$tablet} {
+        width: calc(100% - #{$navWidthTablet});
+    }
 
     @media #{$smallPhone, $largePhone} {
+        width: calc(100% - #{$navWidthSmallScreen});
         padding-top: 0%;
         padding-bottom: 0%;
+        padding-left: 15px;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -169,8 +206,8 @@ nav {
     align-content: center;
     button {
         background-color: $primaryFontColor;
-        border: $primaryBackground;
-        color: $primaryBackground;
+        border: $secondaryBackground;
+        color: $secondaryBackground;
         padding: 0.5em 2em;
         margin: 0.5em;
         text-align: center;
@@ -186,11 +223,6 @@ nav {
             font-size: 10px;
         }
     }
-}
-
-// ZinePreview
-
-.zine-preview {
 }
 
 // related to prompts page
@@ -220,7 +252,7 @@ nav {
     text-align: center;
     justify-content: left;
 
-    @media #{$smallPhone, $largePhone, $tablet} {
+    @media #{$smallPhone, $largePhone} {
         flex-direction: column;
         justify-content: center;
     }
@@ -240,7 +272,7 @@ nav {
     text-align: center;
     margin-left: 10%;
 
-    @media #{$smallPhone, $largePhone, $tablet} {
+    @media #{$smallPhone, $largePhone} {
         flex-direction: column;
         margin-bottom: 20px;
         margin-top: 20px;
