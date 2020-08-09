@@ -1,7 +1,7 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #b3b3b3;
+  background-color: #999999;
 }
 
 *, *::before, *::after {
@@ -30,7 +30,7 @@ nav ul li {
 
 nav ul li a {
   color: #990000;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Verdana, "Geneva", sans-serif;
   font-style: italic;
   text-decoration: none;
 }
@@ -45,7 +45,7 @@ nav ul li a:hover {
   padding: 0;
   width: 130px;
   height: 100%;
-  background-color: #b3b3b3;
+  background-color: #999999;
   border-style: none;
   border-color: black;
   -webkit-box-sizing: border-box;
@@ -159,7 +159,8 @@ nav ul li a:hover {
           box-sizing: border-box;
   float: right;
   color: #990000;
-  background: linear-gradient(90deg, #999999 21px, transparent 1%) center, linear-gradient(#999999 21px, transparent 1%) center, white;
+  font-family: Verdana, "Geneva", sans-serif;
+  background: linear-gradient(90deg, #b3b3b3 21px, transparent 1%) center, linear-gradient(#b3b3b3 21px, transparent 1%) center, white;
   background-size: 22px 22px;
 }
 
@@ -193,10 +194,10 @@ nav ul li a:hover {
       align-content: center;
 }
 
-.zineviewer button {
+.zineviewer .mainButton {
   background-color: #990000;
-  border: #999999;
-  color: #999999;
+  border: #b3b3b3;
+  color: #b3b3b3;
   padding: 0.5em 2em;
   margin: 0.5em;
   text-align: center;
@@ -205,12 +206,34 @@ nav ul li a:hover {
   font-size: 16px;
 }
 
-.zineviewer button:hover {
+.zineviewer .mainButton:hover {
   background-color: #b30000;
 }
 
 @media only screen and (max-width: 320px), only screen and (max-width: 480px) {
-  .zineviewer button {
+  .zineviewer .mainButton {
+    font-size: 10px;
+  }
+}
+
+.zineviewer .pageButton {
+  background-color: #990000;
+  border: #b3b3b3;
+  color: #b3b3b3;
+  padding: 0em;
+  margin: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.zineviewer .pageButton:hover {
+  background-color: #b30000;
+}
+
+@media only screen and (max-width: 320px), only screen and (max-width: 480px) {
+  .zineviewer .pageButton {
     font-size: 10px;
   }
 }

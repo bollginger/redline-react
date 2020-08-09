@@ -12,6 +12,7 @@ function ZineViewer(props) {
   function onDocumentLoadSuccess({ numPages }) {
       setNumPages(numPages);
       setPageNumber(1);
+      console.log("Document Loaded");
   }
 
   function changePage(offset) {
@@ -32,31 +33,58 @@ function ZineViewer(props) {
   // because pdfs are rendered without regard to css, below optimizes for mobile
   // also takes into account that page 1 has half the width of later pages
   pdfWidth = (pdfWidth <= 480) ? pdfWidth*0.9:pdfWidth*0.6;
-  pdfWidth = (fullScreenToggle.active === true) ? pageWidth:pdfWidth;
+  pdfWidth = (fullScreenToggle.active === true) ? pageWidth*0.8:pdfWidth;
   pdfWidth = (pageNumber === 1) ? pdfWidth*0.5:pdfWidth;
 
+  // setting visibility of "Exit fullscreen" button
+  let buttonVisibility = (fullScreenToggle.active === true) ? 'inline-block':'none';
+
+  // Creating array of buttons for jumping pages
+  let pageNumberButtons = [];
+
+  for (let page = 1; page <= numPages; page++) {
+    pageNumberButtons.push(
+      <button
+        disabled={pageNumber === {page}}
+        className='pageButton'
+        onClick={() => setPageNumber(page)}
+        style={{display: buttonVisibility}}
+      >
+        {page}
+      </button>
+    )
+  }
+
   return (
-    <div class='zineviewer'>
-      <button type='button' onClick={fullScreenToggle.enter}>
+    <div className='zineviewer'>
+      <button type='button' className='mainButton' onClick={fullScreenToggle.enter}>
         Enter fullscreen
       </button>
       <FullScreen handle={fullScreenToggle}>
         <p>
           Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
         </p>
-        <button type="button" disabled={pageNumber <= 1} onClick={previousPage}>
+        <button type="button" className='mainButton' disabled={pageNumber <= 1} onClick={previousPage}>
           Previous
         </button>
         <button
           type="button"
+          className='mainButton'
           disabled={pageNumber >= numPages}
           onClick={nextPage}
         >
           Next
         </button>
-        <button type='button' onClick={fullScreenToggle.exit}>
+        <button 
+          type='button' 
+          className='mainButton'
+          onClick={fullScreenToggle.exit} 
+          style={{display: buttonVisibility}}
+        >
           Exit fullscreen
         </button>
+        <span style={{display: buttonVisibility}}>Go to page: </span>
+        {pageNumberButtons}
         <Document
           file= {pdf}
           options={{ workerSrc: "/pdf.worker.js" }}

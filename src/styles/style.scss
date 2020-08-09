@@ -1,6 +1,6 @@
-$primaryBackground: #b3b3b3;
-$secondaryBackground: #999999;
-$primaryFont: Georgia, 'Times New Roman', Times, serif;
+$primaryBackground: #999999;
+$secondaryBackground: #b3b3b3;
+$primaryFont: Verdana, 'Geneva', sans-serif;
 $primaryFontColor: #990000;
 $lighterPrimaryFont: #b30000;
 
@@ -9,7 +9,7 @@ $navWidthTablet: 80px;
 $navWidthSmallScreen: 35px;
 
 // Colors for main background
-$bg-color: #999999;
+$bg-color: #b3b3b3;
 $dot-color: white;
 
 // Dimensions for main background design
@@ -172,6 +172,7 @@ nav {
     box-sizing: border-box;
     float: right;
     color: $primaryFontColor;
+    font-family: $primaryFont;
 
     // from https://codepen.io/edmundojr/pen/xOYJGw
     background:
@@ -204,11 +205,31 @@ nav {
     margin: 0;
     padding: 0;
     align-content: center;
-    button {
+    .mainButton {
         background-color: $primaryFontColor;
         border: $secondaryBackground;
         color: $secondaryBackground;
         padding: 0.5em 2em;
+        margin: 0.5em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+
+        &:hover{
+            background-color: $lighterPrimaryFont;
+        }
+
+        @media #{$smallPhone, $largePhone} {
+            font-size: 10px;
+        }
+    }
+
+    .pageButton {
+        background-color: $primaryFontColor;
+        border: $secondaryBackground;
+        color: $secondaryBackground;
+        padding: 0em;
         margin: 0.5em;
         text-align: center;
         text-decoration: none;
