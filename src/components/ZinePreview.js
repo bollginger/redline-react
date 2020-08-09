@@ -7,7 +7,7 @@ function ZinePreview(props) {
   let { pdf, pdfWidth } = props;
   
   // because pdfs are rendered without regard to css, below optimizes for mobile
-  pdfWidth = (pdfWidth <= 480) ? pdfWidth:pdfWidth*0.4;
+  pdfWidth = (pdfWidth <= 480) ? pdfWidth*0.9:pdfWidth*0.3;
 
   return (
     <div class='zine-preview'>

@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 import ZinePreview from '../components/ZinePreview';
 import redline2 from "../zines/redline_issue_2_2020.pdf";
 
-const Home = ({pdfWidth}) => (
+const Home = ({pdfWidth}) => {
+  return (
   <div class='home'>
     <NavLink to='/currentissue'>
       <ZinePreview pdf={redline2} pdfWidth={pdfWidth}/>
@@ -18,7 +19,8 @@ const Home = ({pdfWidth}) => (
                   <img src='./insta.jpeg' height='20' width='20' alt='Instagram'></img></a>
     </div>
   </div>
-);
+  )
+};
 
 
 export default Home;
