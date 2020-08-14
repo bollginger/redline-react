@@ -1,5 +1,4 @@
-$primaryBackground: #999999;
-$secondaryBackground: #b3b3b3;
+// Font styles and colors
 $primaryFont: Verdana, 'Geneva', sans-serif;
 $primaryFontColor: #990000;
 $lighterPrimaryFont: #b30000;
@@ -8,8 +7,9 @@ $navWidthLargeScreen: 130px;
 $navWidthTablet: 80px;
 $navWidthSmallScreen: 35px;
 
-// Colors for main background
-$bg-color: #b3b3b3;
+// Main background colors
+$primaryBackground: #b3b3b3;
+$secondaryBackground: #999999;
 $dot-color: white;
 
 // Dimensions for main background design
@@ -67,7 +67,7 @@ nav {
     padding: 0;
     width: $navWidthLargeScreen;
     height: 100%;
-    background-color: $primaryBackground;
+    background-color: $secondaryBackground;
     border-style: none;
     border-color: black;
     box-sizing: border-box;
@@ -166,18 +166,18 @@ nav {
     position: relative;
     width: calc(100% - #{$navWidthLargeScreen});
     height: 100vh;
-    padding-top: 5%;
     padding-bottom: 5%;
     padding-left: 20px;
     box-sizing: border-box;
     float: right;
     color: $primaryFontColor;
     font-family: $primaryFont;
+    overflow: auto;
 
     // from https://codepen.io/edmundojr/pen/xOYJGw
     background:
-        linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
-        linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+        linear-gradient(90deg, $primaryBackground ($dot-space - $dot-size), transparent 1%) center,
+        linear-gradient($primaryBackground ($dot-space - $dot-size), transparent 1%) center,
         $dot-color;
     background-size: $dot-space $dot-space;
 
@@ -205,6 +205,7 @@ nav {
     margin: 0;
     padding: 0;
     align-content: center;
+
     .mainButton {
         background-color: $primaryFontColor;
         border: $secondaryBackground;
@@ -223,6 +224,12 @@ nav {
         @media #{$smallPhone, $largePhone} {
             font-size: 10px;
         }
+    }
+
+    .pageButtonContainer {
+        overflow-x: scroll;
+        height: 1em;
+        font-size: 16px;
     }
 
     .pageButton {
@@ -272,6 +279,7 @@ nav {
     flex-direction:row;
     text-align: center;
     justify-content: left;
+    margin-top: 5%;
 
     @media #{$smallPhone, $largePhone} {
         flex-direction: column;
@@ -308,6 +316,7 @@ nav {
     flex-direction:row;
     text-align: center;
     margin-right: 10%;
+    padding-top: 5%;
 
     @media #{$smallPhone, $largePhone, $tablet} {
         flex-direction:column;

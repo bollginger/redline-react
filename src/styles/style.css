@@ -1,7 +1,7 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #999999;
+  background-color: #b3b3b3;
 }
 
 *, *::before, *::after {
@@ -152,7 +152,6 @@ nav ul li a:hover {
   position: relative;
   width: calc(100% - 130px);
   height: 100vh;
-  padding-top: 5%;
   padding-bottom: 5%;
   padding-left: 20px;
   -webkit-box-sizing: border-box;
@@ -160,6 +159,7 @@ nav ul li a:hover {
   float: right;
   color: #990000;
   font-family: Verdana, "Geneva", sans-serif;
+  overflow: auto;
   background: linear-gradient(90deg, #b3b3b3 21px, transparent 1%) center, linear-gradient(#b3b3b3 21px, transparent 1%) center, white;
   background-size: 22px 22px;
 }
@@ -196,8 +196,8 @@ nav ul li a:hover {
 
 .zineviewer .mainButton {
   background-color: #990000;
-  border: #b3b3b3;
-  color: #b3b3b3;
+  border: #999999;
+  color: #999999;
   padding: 0.5em 2em;
   margin: 0.5em;
   text-align: center;
@@ -216,10 +216,16 @@ nav ul li a:hover {
   }
 }
 
+.zineviewer .pageButtonContainer {
+  overflow-x: scroll;
+  height: 1em;
+  font-size: 16px;
+}
+
 .zineviewer .pageButton {
   background-color: #990000;
-  border: #b3b3b3;
-  color: #b3b3b3;
+  border: #999999;
+  color: #999999;
   padding: 0em;
   margin: 0.5em;
   text-align: center;
@@ -272,6 +278,7 @@ nav ul li a:hover {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
+  margin-top: 5%;
 }
 
 @media only screen and (max-width: 320px), only screen and (max-width: 480px) {
@@ -328,6 +335,7 @@ nav ul li a:hover {
           flex-direction: row;
   text-align: center;
   margin-right: 10%;
+  padding-top: 5%;
 }
 
 @media only screen and (max-width: 320px), only screen and (max-width: 480px), only screen and (max-width: 768px) {
