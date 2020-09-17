@@ -1,5 +1,5 @@
 // Font styles and colors
-$primaryFont: Verdana, 'Geneva', sans-serif;
+$primaryFont: Verdana, "Geneva", sans-serif;
 $primaryFontColor: #990000;
 $lighterPrimaryFont: #b30000;
 
@@ -24,319 +24,323 @@ $smallComputer: "only screen and (max-width : 1024px)";
 $largeComputer: "only screen and (max-width : 1200px)";
 
 html {
-    box-sizing: border-box;
-    background-color: $primaryBackground;
+  box-sizing: border-box;
+  background-color: $primaryBackground;
 }
 
-*, *::before, *::after {
-    box-sizing: inherit;
-    padding: 0;
-    margin: 0;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 // styling for navigation
 
 nav {
-    ul {
-        list-style: none;
-        display: none;
-        flex-direction:column;
-        margin-bottom: 20px;
-        box-sizing: border-box;
-        width: 200px;
+  ul {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    width: 200px;
 
-        li {
-            padding: 20px;
+    li {
+      padding: 20px;
 
-            a {
-                color: $primaryFontColor;
-                font-family: $primaryFont;
-                font-style: italic;
-                text-decoration: none;
-                &:hover{
-                    font-style: normal;
-                }
-            }
+      a {
+        color: $primaryFontColor;
+        font-family: $primaryFont;
+        font-style: italic;
+        text-decoration: none;
+        &:hover {
+          font-style: normal;
         }
+      }
     }
+  }
 }
 
 .navigation {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: $navWidthLargeScreen;
-    height: 100%;
-    background-color: $secondaryBackground;
-    border-style: none;
-    border-color: black;
-    box-sizing: border-box;
-    float:left;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: $navWidthLargeScreen;
+  height: 100%;
+  background-color: $secondaryBackground;
+  border-style: none;
+  border-color: black;
+  box-sizing: border-box;
+  float: left;
 
-    @media #{$tablet} {
-        width: $navWidthTablet;
-    }
+  @media #{$tablet} {
+    width: $navWidthTablet;
+  }
 
-    @media #{$smallPhone, $largePhone} {
-        width: $navWidthSmallScreen;
-    }
+  @media #{$smallPhone, $largePhone} {
+    width: $navWidthSmallScreen;
+  }
 }
 
 .current {
-    border-bottom: 4px solid $primaryFontColor;
+  border-bottom: 4px solid $primaryFontColor;
 }
 
 .inDropdown {
-    text-align: right;
-    padding: 10px;
-    margin-bottom: 10px;
-    color: black;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: black;
 }
 
 .logo-expanded {
-    position: relative;
-    display: none;
-    height: 180px;
-    width: 225px;
-    top: 0;
-    left: 0;
-    z-index: 2;
+  position: relative;
+  display: none;
+  height: 180px;
+  width: 225px;
+  top: 0;
+  left: 0;
+  z-index: 2;
 
-    @media #{$tablet} {
-        height: 90px;
-        width: 112px;
-    }
+  @media #{$tablet} {
+    height: 90px;
+    width: 112px;
+  }
 
-    @media #{$smallPhone, $largePhone} {
-        height: 60px;
-        width: 75px;
-    }
+  @media #{$smallPhone, $largePhone} {
+    height: 60px;
+    width: 75px;
+  }
 }
 
 .logo-collapsed {
-    display: inline-block;
-    position: relative;
-    height: 100px;
-    width: 100px;
+  display: inline-block;
+  position: relative;
+  height: 100px;
+  width: 100px;
 
-    margin-top: 45px;
-    margin-left: 15px;
-    margin-bottom: 30px;
+  margin-top: 45px;
+  margin-left: 15px;
+  margin-bottom: 30px;
 
-    @media #{$tablet} {
-        height: 50px;
-        width: 50px;
+  @media #{$tablet} {
+    height: 50px;
+    width: 50px;
 
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    @media #{$smallPhone, $largePhone} {
-        height: 25px;
-        width: 25px;
+  @media #{$smallPhone, $largePhone} {
+    height: 25px;
+    width: 25px;
 
-        margin-top: 20px;
-        margin-left: 5px;
-        margin-bottom: 20px;
-    }
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+  }
 }
 
 .icon-expanded {
-    position: relative;
-    display: none;
-    height: 30px;
-    width: 30px;
-    top: 0;
-    left: 0;
-    z-index: 2;
+  position: relative;
+  display: none;
+  height: 30px;
+  width: 30px;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .icon-collapsed {
-    display: inline-block;
-    position: relative;
-    height: 30px;
-    width: 30px;
-    top: 0;
-    left: 0;
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  top: 0;
+  left: 0;
 }
 
 // styling for all pages
 
 .main {
-    position: relative;
-    width: calc(100% - #{$navWidthLargeScreen});
-    height: 100vh;
-    padding-bottom: 5%;
-    padding-left: 20px;
-    box-sizing: border-box;
-    float: right;
-    color: $primaryFontColor;
-    font-family: $primaryFont;
-    overflow: auto;
+  position: relative;
+  width: calc(100% - #{$navWidthLargeScreen});
+  height: 100vh;
+  padding-bottom: 5%;
+  padding-left: 20px;
+  box-sizing: border-box;
+  float: right;
+  color: $primaryFontColor;
+  font-family: $primaryFont;
+  overflow: auto;
 
-    // from https://codepen.io/edmundojr/pen/xOYJGw
-    background:
-        linear-gradient(90deg, $primaryBackground ($dot-space - $dot-size), transparent 1%) center,
-        linear-gradient($primaryBackground ($dot-space - $dot-size), transparent 1%) center,
-        $dot-color;
-    background-size: $dot-space $dot-space;
+  // from https://codepen.io/edmundojr/pen/xOYJGw
+  background: linear-gradient(
+        90deg,
+        $primaryBackground ($dot-space - $dot-size),
+        transparent 1%
+      )
+      center,
+    linear-gradient($primaryBackground ($dot-space - $dot-size), transparent 1%)
+      center,
+    $dot-color;
+  background-size: $dot-space $dot-space;
 
+  @media #{$tablet} {
+    width: calc(100% - #{$navWidthTablet});
+  }
 
-
-
-    @media #{$tablet} {
-        width: calc(100% - #{$navWidthTablet});
-    }
-
-    @media #{$smallPhone, $largePhone} {
-        width: calc(100% - #{$navWidthSmallScreen});
-        padding-top: 0%;
-        padding-bottom: 0%;
-        padding-left: 15px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
+  @media #{$smallPhone, $largePhone} {
+    width: calc(100% - #{$navWidthSmallScreen});
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 // ZineViewer
 
 .zineviewer {
-    margin: 0;
-    padding: 0;
-    align-content: center;
+  margin: 0;
+  padding: 0;
+  align-content: center;
 
-    .mainButton {
-        background-color: $primaryFontColor;
-        border: $secondaryBackground;
-        color: $secondaryBackground;
-        padding: 0.5em 2em;
-        margin: 0.5em;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
+  .mainButton {
+    background-color: $primaryFontColor;
+    border: $secondaryBackground;
+    color: $secondaryBackground;
+    padding: 0.5em 2em;
+    margin: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 
-        &:hover{
-            background-color: $lighterPrimaryFont;
-        }
-
-        @media #{$smallPhone, $largePhone} {
-            font-size: 10px;
-        }
+    &:hover {
+      background-color: $lighterPrimaryFont;
     }
 
-    .pageButtonContainer {
-        overflow-x: scroll;
-        height: 1em;
-        font-size: 16px;
+    @media #{$smallPhone, $largePhone} {
+      font-size: 10px;
+    }
+  }
+
+  .pageButtonContainer {
+    overflow-x: scroll;
+    height: 1em;
+    font-size: 16px;
+  }
+
+  .pageButton {
+    background-color: $primaryFontColor;
+    border: $secondaryBackground;
+    color: $secondaryBackground;
+    padding: 0em;
+    margin: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    &:hover {
+      background-color: $lighterPrimaryFont;
     }
 
-    .pageButton {
-        background-color: $primaryFontColor;
-        border: $secondaryBackground;
-        color: $secondaryBackground;
-        padding: 0em;
-        margin: 0.5em;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-
-        &:hover{
-            background-color: $lighterPrimaryFont;
-        }
-
-        @media #{$smallPhone, $largePhone} {
-            font-size: 10px;
-        }
+    @media #{$smallPhone, $largePhone} {
+      font-size: 10px;
     }
+  }
 }
 
 // related to prompts page
 
 .prompts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    padding-right: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  padding-right: 5%;
 
-    @media #{$smallPhone, $largePhone} {
-        padding-left: 5%;
-    }
+  @media #{$smallPhone, $largePhone} {
+    padding-left: 5%;
+  }
 }
 
 .full-row {
-    font-weight: bold;
-    grid-column-start: 1;
-    grid-column-end: 3;
+  font-weight: bold;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 // related to homepage
 
 .home {
-    display: flex;
-    flex-direction:row;
-    text-align: center;
-    justify-content: left;
-    margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: left;
+  margin-top: 5%;
 
-    @media #{$smallPhone, $largePhone} {
-        flex-direction: column;
-        justify-content: center;
-    }
+  @media #{$smallPhone, $largePhone} {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .rotating-home {
-    width: 100px;
-    height: 100px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-right {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 10%;
 
-    @media #{$smallPhone, $largePhone} {
-        flex-direction: column;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        margin-left: 0%;
-    }
+  @media #{$smallPhone, $largePhone} {
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 0%;
+  }
 }
 
 // related to archive page
 
 .archive {
-    display: flex;
-    flex-direction:row;
-    text-align: center;
-    margin-right: 10%;
-    padding-top: 5%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-right: 10%;
+  padding-top: 5%;
 
-    @media #{$smallPhone, $largePhone, $tablet} {
-        flex-direction:column;
-    }
+  @media #{$smallPhone, $largePhone, $tablet} {
+    flex-direction: column;
+  }
 }
 
 .archiveIssuePadding {
-    width: 5%;
+  width: 5%;
 
-    @media #{$smallPhone, $largePhone, $tablet} {
-        width: 0%;
-    }
+  @media #{$smallPhone, $largePhone, $tablet} {
+    width: 0%;
+  }
 }
 
 // Related to About page
 
 .about {
-    padding-right: 5%;
+  padding-right: 5%;
 
-    @media #{$smallPhone, $largePhone} {
-        padding-left: 5%;
-    }
+  @media #{$smallPhone, $largePhone} {
+    padding-left: 5%;
+  }
 }
