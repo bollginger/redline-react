@@ -24,18 +24,8 @@ const Navigation = () => {
       <div>
         <ul id="sidebar">
           <li>
-            <NavLink exact activeClassName="current" to="/about">
-              About
-            </NavLink>
-          </li>
-          <li>
             <NavLink exact activeClassName="current" to="/currentissue">
-              Current Issue
-            </NavLink>
-          </li>
-          <li>
-            <NavLink exact activeClassName="current" to="/archive">
-              Archive
+              Issue No. 4
             </NavLink>
           </li>
           <li>
@@ -43,6 +33,18 @@ const Navigation = () => {
               Submit
             </NavLink>
           </li>
+          <li>
+            <NavLink exact activeClassName="current" to="/about">
+              About
+            </NavLink>
+          </li>
+          <li></li>
+          <li>
+            <NavLink exact activeClassName="current" to="/archive">
+              Archive
+            </NavLink>
+          </li>
+          <li></li>
           <li>
             <NavLink exact activeClassName="current" to="/shop">
               Shop
