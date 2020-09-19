@@ -1,13 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import ZinePreview from "../components/ZinePreview";
-import redline4_p1 from "../zineFirstPages/issue4.master1.jpg";
 
 const Home = ({ pdfWidth }) => {
   return (
     <div class="home">
       <NavLink to="/currentissue">
-        <ZinePreview page={redline4_p1} pdfWidth={pdfWidth} />
+        <ZinePreview
+          page={"../zinePages/issue4/issue4.master1.jpg"}
+          pdfWidth={pdfWidth}
+        />
       </NavLink>
       <div class="home-right">
         <h3>Coming soon...</h3>
