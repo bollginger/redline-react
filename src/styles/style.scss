@@ -210,6 +210,11 @@ nav {
   padding: 0;
   align-content: center;
 
+  .zineImage {
+    margin: auto;
+    display: block;
+  }
+
   .mainButton {
     background-color: $primaryFontColor;
     border: $secondaryBackground;
@@ -299,11 +304,28 @@ nav {
   margin-right: auto;
 }
 
+.home-left {
+  display: flex;
+  width: 50%;
+
+  .zine-img {
+    margin: auto;
+    display: block;
+  }
+
+  @media #{$smallPhone, $largePhone} {
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 0%;
+  }
+}
+
 .home-right {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-left: 10%;
+  width: 50%;
 
   @media #{$smallPhone, $largePhone} {
     flex-direction: column;

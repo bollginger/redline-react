@@ -15,7 +15,7 @@ function ZineViewer(props) {
       pageImageSource.slice(0, pageImageSource.length - (prevNumLength + 4)) +
       pageNumString +
       ".jpg";
-    setPageNumber((prevPageNumber) => prevPageNumber + 1);
+    setPageNumber((prevPageNumber) => prevPageNumber - 1);
     setPageImageSource(pageTemp);
   }
 
@@ -46,7 +46,11 @@ function ZineViewer(props) {
   let pageNumberButtons = [];
 
   const handleImageClick = () => {
-    fullScreenToggle.active === false ? fullScreenToggle.enter() : nextPage();
+    if (fullScreenToggle.active === false) {
+      fullScreenToggle.enter();
+    } else if (pageNumber < numPages) {
+      nextPage();
+    }
   };
 
   for (let page = 1; page <= numPages; page++) {
@@ -54,7 +58,20 @@ function ZineViewer(props) {
       <button
         disabled={pageNumber === { page }}
         className="pageButton"
-        onClick={() => setPageNumber(page)}
+        onClick={() => {
+          let prevNumLength = pageNumber.toString().length;
+          let pageNumString = page.toString();
+          let pageTemp =
+            pageImageSource.slice(
+              0,
+              pageImageSource.length - (prevNumLength + 4)
+            ) +
+            pageNumString +
+            ".jpg";
+          setPageNumber(page);
+          setPageImageSource(pageTemp);
+          console.log(pageTemp);
+        }}
         style={{ display: buttonVisibility }}
       >
         {page}
@@ -73,6 +90,7 @@ function ZineViewer(props) {
       </button>
       <FullScreen handle={fullScreenToggle}>
         <img
+          className="zineImage"
           src={pageImageSource}
           width={pdfWidth}
           onClick={handleImageClick}

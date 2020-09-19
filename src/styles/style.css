@@ -196,6 +196,11 @@ nav ul li a:hover {
       align-content: center;
 }
 
+.zineviewer .zineImage {
+  margin: auto;
+  display: block;
+}
+
 .zineviewer .mainButton {
   background-color: #990000;
   border: #999999;
@@ -303,6 +308,30 @@ nav ul li a:hover {
   margin-right: auto;
 }
 
+.home-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+}
+
+.home-left .zine-img {
+  margin: auto;
+  display: block;
+}
+
+@media only screen and (max-width: 320px), only screen and (max-width: 480px) {
+  .home-left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 0%;
+  }
+}
+
 .home-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -312,7 +341,7 @@ nav ul li a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  margin-left: 10%;
+  width: 50%;
 }
 
 @media only screen and (max-width: 320px), only screen and (max-width: 480px) {

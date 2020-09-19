@@ -5,12 +5,14 @@ import ZinePreview from "../components/ZinePreview";
 const Home = ({ pdfWidth }) => {
   return (
     <div class="home">
-      <NavLink to="/currentissue">
-        <ZinePreview
-          page={"../zinePages/issue4/issue4.master1.jpg"}
-          pdfWidth={pdfWidth}
-        />
-      </NavLink>
+      <div class="home-left">
+        <NavLink to="/currentissue" className="zine-img">
+          <ZinePreview
+            page={"../zinePages/issue4/issue4.master1.jpg"}
+            pdfWidth={pdfWidth}
+          />
+        </NavLink>
+      </div>
       <div class="home-right">
         <h3>Coming soon...</h3>
         <h1>(Insert name of next issue here)</h1>
