@@ -68,7 +68,7 @@ nav ul li a:hover {
 }
 
 .current {
-  border-bottom: 4px solid #990000;
+  border-bottom: 1px solid #990000;
 }
 
 .inDropdown {
