@@ -352,19 +352,32 @@ nav {
   display: flex;
   flex-direction: row;
   text-align: center;
-  margin-right: 10%;
-  padding-top: 5%;
+  flex-wrap: wrap;
+
+  .zine-container {
+    width: 50%;
+    margin-top: 2%;
+    font-size: 16px;
+
+    @media #{$smallPhone, $largePhone} {
+      width: 100%;
+      font-size: 12px;
+    }
+
+    .zine-img {
+      width: 85%;
+      border: 20px solid black;
+      margin: auto;
+      display: block;
+
+      @media #{$smallPhone, $largePhone} {
+        border: 5px solid black;
+      }
+    }
+  }
 
   @media #{$smallPhone, $largePhone, $tablet} {
     flex-direction: column;
-  }
-}
-
-.archiveIssuePadding {
-  width: 5%;
-
-  @media #{$smallPhone, $largePhone, $tablet} {
-    width: 0%;
   }
 }
 

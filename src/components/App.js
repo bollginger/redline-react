@@ -29,7 +29,8 @@ class App extends PureComponent {
     document.getElementById("sidebar").style.width = "250px";
     document.getElementById("navigation").style.width = "250px";
     document.getElementById("navigation").style.zIndex = "3";
-    document.getElementById("navigation").style.borderStyle = "double";
+    document.getElementById("navigation").style.borderStyle =
+      "none solid none none";
     document.getElementById("main").style.zIndex = "1";
     document.getElementById("sidebar").style.display = "flex";
     document.getElementById("logo-expanded").style.display = "inline-block";

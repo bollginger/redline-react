@@ -4,26 +4,29 @@ import {
   redlineIssue1,
   redlineIssue2,
   redlineIssue3,
+  redlineIssue4,
 } from "../zines/zineVariables";
-import ZinePreview from "../components/ZinePreview";
 
 const Archive = ({ pdfWidth }) => {
   // Add additional issues to this list
-  let issues = [redlineIssue1, redlineIssue2, redlineIssue3];
+  let issues = [redlineIssue1, redlineIssue2, redlineIssue3, redlineIssue4];
 
   let issuesDisplay = issues.map((issueInfo) => {
     let pageUrl = "/archive-issue" + issueInfo.issueNumber;
     return (
       <>
-        <div>
+        <div className="zine-container">
           <NavLink to={pageUrl}>
-            <ZinePreview page={issueInfo.firstPage} pdfWidth={pdfWidth} />
+            <img
+              src={issueInfo.firstPage}
+              className="zine-img"
+              alt="Zine Cover"
+            ></img>
           </NavLink>
           <a href={issueInfo.path} download>
             No. {issueInfo.issueNumber}, {issueInfo.issueDate}
           </a>
         </div>
-        <div class="archiveIssuePadding" />
       </>
     );
   });
