@@ -281,11 +281,8 @@ nav ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  text-align: center;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  margin-top: 5%;
+  margin-top: 2%;
+  position: fixed;
 }
 
 @media only screen and (max-width: 320px), only screen and (max-width: 480px) {
@@ -300,24 +297,21 @@ nav ul li a:hover {
   }
 }
 
-.rotating-home {
-  width: 100px;
-  height: 100px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .home-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 50%;
+  width: 70%;
 }
 
 .home-left .zine-img {
+  width: 64%;
   margin: auto;
   display: block;
+  border: 20px solid white;
+}
+
+@media only screen and (max-width: 320px), only screen and (max-width: 480px) {
+  .home-left .zine-img {
+    border: 5px solid white;
+  }
 }
 
 @media only screen and (max-width: 320px), only screen and (max-width: 480px) {
@@ -326,6 +320,7 @@ nav ul li a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
     margin-bottom: 20px;
     margin-top: 20px;
     margin-left: 0%;
@@ -341,7 +336,20 @@ nav ul li a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  width: 50%;
+  width: 30%;
+  margin: auto;
+}
+
+.home-right .submit-today {
+  background-color: #990000;
+  border: #999999;
+  color: #999999;
+  padding: 0.5em 2em;
+  margin: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 320px), only screen and (max-width: 480px) {
@@ -350,6 +358,7 @@ nav ul li a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
     margin-bottom: 20px;
     margin-top: 20px;
     margin-left: 0%;

@@ -9,7 +9,7 @@ function ZinePreview(props) {
 
   return (
     <div class="zine-preview">
-      <img src={page} width={pdfWidth} alt="Zine Cover"></img>
+      <img src={page} alt="Zine Cover"></img>
     </div>
   );
 }
