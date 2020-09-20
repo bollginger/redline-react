@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Redline/static/css/main.e30c4530.chunk.css",
+    "main.js": "/Redline/static/js/main.6569cbdb.chunk.js",
+    "main.js.map": "/Redline/static/js/main.6569cbdb.chunk.js.map",
+    "runtime-main.js": "/Redline/static/js/runtime-main.b536fe9f.js",
+    "runtime-main.js.map": "/Redline/static/js/runtime-main.b536fe9f.js.map",
+    "static/js/2.e4109fad.chunk.js": "/Redline/static/js/2.e4109fad.chunk.js",
+    "static/js/2.e4109fad.chunk.js.map": "/Redline/static/js/2.e4109fad.chunk.js.map",
+    "index.html": "/Redline/index.html",
+    "precache-manifest.8f09fc9dd12de6930cfb8ea11e3626c9.js": "/Redline/precache-manifest.8f09fc9dd12de6930cfb8ea11e3626c9.js",
+    "service-worker.js": "/Redline/service-worker.js",
+    "static/css/main.e30c4530.chunk.css.map": "/Redline/static/css/main.e30c4530.chunk.css.map",
+    "static/js/2.e4109fad.chunk.js.LICENSE.txt": "/Redline/static/js/2.e4109fad.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b536fe9f.js",
+    "static/js/2.e4109fad.chunk.js",
+    "static/css/main.e30c4530.chunk.css",
+    "static/js/main.6569cbdb.chunk.js"
+  ]
+}

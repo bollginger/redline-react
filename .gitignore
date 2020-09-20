@@ -8,8 +8,7 @@
 # testing
 /coverage
 
-# production
-/build
+# production — not ignored for now
 
 # misc
 /public/*.pdf
