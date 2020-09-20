@@ -270,6 +270,23 @@ nav {
   text-align: center;
   padding-right: 5%;
 
+  .submit-button {
+    background-color: $primaryFontColor;
+    color: $secondaryBackground;
+    border: $secondaryBackground;
+    padding: 0.5em 2em;
+    margin: 0.5em;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    &:hover {
+      background-color: $lighterPrimaryFont;
+    }
+  }
+
   @media #{$smallPhone, $largePhone} {
     padding-left: 5%;
   }
@@ -335,6 +352,10 @@ nav {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+
+    &:hover {
+      background-color: $lighterPrimaryFont;
+    }
   }
 
   @media #{$smallPhone, $largePhone} {

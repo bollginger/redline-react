@@ -260,6 +260,23 @@ nav ul li a:hover {
   padding-right: 5%;
 }
 
+.prompts .submit-button {
+  background-color: #990000;
+  color: #999999;
+  border: #999999;
+  padding: 0.5em 2em;
+  margin: 0.5em;
+  text-align: center;
+  margin: auto;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.prompts .submit-button:hover {
+  background-color: #b30000;
+}
+
 @media only screen and (max-width: 320px), only screen and (max-width: 480px) {
   .prompts {
     padding-left: 5%;
@@ -350,6 +367,10 @@ nav ul li a:hover {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.home-right .submit-today:hover {
+  background-color: #b30000;
 }
 
 @media only screen and (max-width: 320px), only screen and (max-width: 480px) {

@@ -2,7 +2,6 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
-import Contact from "../pages/Contact";
 import DisplayIssue from "../pages/DisplayIssue";
 import Shop from "../pages/Shop";
 import Archive from "../pages/Archive";
@@ -49,7 +48,6 @@ const Main = ({ pdfWidth }) => {
           render={(props) => <Home {...props} pdfWidth={pdfWidth} />}
         ></Route>
         <Route exact path="/about" component={About}></Route>
-        <Route exact path="/contact" component={Contact}></Route>
         <Route
           exact
           path="/currentissue"

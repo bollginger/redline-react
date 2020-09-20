@@ -56,11 +56,6 @@ const Navigation = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink exact activeClassName="current" to="/contact">
-              Contact
-            </NavLink>
-          </li>
-          <li>
             <a href="https://www.instagram.com/redline_zine/">
               <img
                 src="./insta.jpeg"
