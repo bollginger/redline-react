@@ -13,13 +13,18 @@ import {
   redlineIssue2,
   redlineIssue3,
   redlineIssue4,
-} from "../zines/zineVariables";
+} from "../images/zines/zineVariables";
 
 const Main = ({ pdfWidth }) => {
-  const archiveIssues = [redlineIssue1, redlineIssue2, redlineIssue3];
+  const archiveIssues = [
+    redlineIssue1,
+    redlineIssue2,
+    redlineIssue3,
+    redlineIssue4,
+  ];
 
   let archiveIssuesLinks = archiveIssues.map((issueInfo) => {
-    let pageUrl = "/archive-issue" + issueInfo.issueNumber;
+    let pageUrl = "/issue" + issueInfo.issueNumber;
     return (
       <Route
         exact
@@ -42,11 +47,7 @@ const Main = ({ pdfWidth }) => {
   return (
     <>
       <Switch>
-        <Route
-          exact
-          path="/"
-          render={(props) => <Home {...props} pdfWidth={pdfWidth} />}
-        ></Route>
+        <Route exact path="/redline-react" component={Home}></Route>
         <Route exact path="/about" component={About}></Route>
         <Route
           exact
@@ -67,11 +68,7 @@ const Main = ({ pdfWidth }) => {
         <Route exact path="/guidelines" component={SubmitGuidelines}></Route>
         <Route exact path="/submit" component={Submissions}></Route>
         <Route exact path="/subscribe" component={Subscribe}></Route>
-        <Route
-          exact
-          path="/archive"
-          render={(props) => <Archive {...props} pdfWidth={pdfWidth} />}
-        ></Route>
+        <Route exact path="/archive" component={Archive}></Route>
         {archiveIssuesLinks}
       </Switch>
     </>

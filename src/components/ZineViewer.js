@@ -6,6 +6,7 @@ function ZineViewer(props) {
   let { pageJpg, issueNumber, numPages, pdfWidth } = props;
   const [pageNumber, setPageNumber] = useState(1); //setting 1 to show first page
   const [pageImageSource, setPageImageSource] = useState(pageJpg);
+  console.log(pageImageSource);
   const fullScreenToggle = useFullScreenHandle();
 
   function previousPage() {
@@ -79,6 +80,7 @@ function ZineViewer(props) {
     );
   }
 
+  console.log(pageImageSource);
   return (
     <div className="zineviewer">
       <button
@@ -91,7 +93,7 @@ function ZineViewer(props) {
       <FullScreen handle={fullScreenToggle}>
         <img
           className="zineImage"
-          src={pageImageSource}
+          src={process.env.PUBLIC_URL + pageImageSource}
           width={pdfWidth}
           onClick={handleImageClick}
           alt={"Zine viewer: issue " + issueNumber}

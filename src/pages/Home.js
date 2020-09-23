@@ -1,14 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import instaLogo from "../images/insta.jpeg";
 
-const Home = ({ pdfWidth }) => {
+const Home = () => {
   return (
     <div class="home">
       <div class="home-left">
         <NavLink to="/currentissue">
           <img
             className="zine-img"
-            src="../zinePages/issue4/issue4.master1.jpg"
+            src={
+              process.env.PUBLIC_URL + "/zinePages/issue4/issue4.master1.jpg"
+            }
             alt="Zine Cover"
           ></img>
         </NavLink>
@@ -22,7 +25,7 @@ const Home = ({ pdfWidth }) => {
           <button className="submit-today">Submit Today!</button>
         </NavLink>
         <a href="https://www.instagram.com/redline_zine/">
-          <img src="./insta.jpeg" height="20" width="20" alt="Instagram"></img>
+          <img src={instaLogo} height="20" width="20" alt="Instagram"></img>
         </a>
       </div>
     </div>

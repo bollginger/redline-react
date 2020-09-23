@@ -1,20 +1,23 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/style.css";
+import collapsedRedlineLogo from "../images/logos/RZLogo_2_cleanRED.png";
+import expandedRedlineLogo from "../images/logos/redline_red.png";
+import instaLogo from "../images/insta.jpeg";
 
 const Navigation = () => {
   return (
     <nav>
-      <NavLink exact to="/">
+      <NavLink exact to="/redline-react">
         <div class="logo">
           <img
-            src="RZLogo_2_cleanRED.png"
+            src={collapsedRedlineLogo}
             alt="Redline Logo"
             class="logo-collapsed"
             id="logo-collapsed"
           ></img>
           <img
-            src="redline_red.png"
+            src={expandedRedlineLogo}
             alt="Redline Logo"
             class="logo-expanded"
             id="logo-expanded"
@@ -57,12 +60,7 @@ const Navigation = () => {
           </li>
           <li>
             <a href="https://www.instagram.com/redline_zine/">
-              <img
-                src="./insta.jpeg"
-                height="20"
-                width="20"
-                alt="Instagram"
-              ></img>
+              <img src={instaLogo} height="20" width="20" alt="Instagram"></img>
             </a>
           </li>
         </ul>
