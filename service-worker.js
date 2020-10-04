@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/redline-react/precache-manifest.c83acf5fa9709e2a6710d311b78347d8.js"
+  "/redline-react/precache-manifest.33c55765ac960ac1185efa36cd97d1df.js"
 );
 
 self.addEventListener('message', (event) => {
