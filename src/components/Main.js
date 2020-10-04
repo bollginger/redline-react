@@ -47,7 +47,7 @@ const Main = ({ pdfWidth }) => {
   return (
     <>
       <Switch>
-        <Route exact path="/" component={Home}></Route>
+        <Route exact path="/redline-react" component={Home}></Route>
         <Route exact path="/about" component={About}></Route>
         <Route
           exact
