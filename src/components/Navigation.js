@@ -8,7 +8,7 @@ import instaLogo from "../images/insta.jpeg";
 const Navigation = () => {
   return (
     <nav>
-      <NavLink exact to="/redline-react">
+      <NavLink exact to="/">
         <div class="logo">
           <img
             src={collapsedRedlineLogo}
